@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Backup System</h1>
+    <p class="lead">Backup System is a web application that will manage backups over LAN and schedule.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>BackUps</h2>
+        <p>
+           Mange your LAN backups
+        </p>
+ <p>@Html.ActionLink("Manage Backups", "Index", "backups",null,  new { @class = "btn btn-default" }) </p>
+<p>@Html.ActionLink("Manage Schedules", "Index", "schedules", null, new { @class = "btn btn-default" }) </p>    
+    </div>
+    <div class="col-md-4">
+        <h2>Activities</h2>
+        <p> .</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Settings</h2>
+        <p> .</p>
+        <p>@Html.ActionLink("Manage WorkStations", "Index", "workstations", null, new { @class = "btn btn-default" }) </p>
+        <p>@Html.ActionLink("Manage Users", "Index", "users", null, new { @class = "btn btn-default" }) </p>
+    </div>
+</div>

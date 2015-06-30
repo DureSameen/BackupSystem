@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackupSystem", "BackupSystem\BackupSystem.csproj", "{89BFEFDA-1D56-4447-8FE9-AAB4E596D6BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackupSystem.Model", "BackupSystem.Model\BackupSystem.Model.csproj", "{F84CB648-AF0F-4285-99D4-88408D423A4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackupSystem.Service", "BackupSystem.Service\BackupSystem.Service.csproj", "{562A9684-D1EE-4F84-A81E-D98C64DAA074}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackupSystem.WebService", "BackupSystem.WebService\BackupSystem.WebService.csproj", "{B0B3D81D-CC14-494D-B012-16F15B098EDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackupSystem.WindowsService", "BackupSystem.WindowsService\BackupSystem.WindowsService.csproj", "{98496DF4-C35D-47FC-833B-3C8B24C99D8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackupSystem.WinApp", "BackupSystem.WinApp\BackupSystem.WinApp.csproj", "{99FF8875-475A-47F9-A9E9-7C09D26F241B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89BFEFDA-1D56-4447-8FE9-AAB4E596D6BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89BFEFDA-1D56-4447-8FE9-AAB4E596D6BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89BFEFDA-1D56-4447-8FE9-AAB4E596D6BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89BFEFDA-1D56-4447-8FE9-AAB4E596D6BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F84CB648-AF0F-4285-99D4-88408D423A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F84CB648-AF0F-4285-99D4-88408D423A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F84CB648-AF0F-4285-99D4-88408D423A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F84CB648-AF0F-4285-99D4-88408D423A4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{562A9684-D1EE-4F84-A81E-D98C64DAA074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{562A9684-D1EE-4F84-A81E-D98C64DAA074}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{562A9684-D1EE-4F84-A81E-D98C64DAA074}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{562A9684-D1EE-4F84-A81E-D98C64DAA074}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0B3D81D-CC14-494D-B012-16F15B098EDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0B3D81D-CC14-494D-B012-16F15B098EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0B3D81D-CC14-494D-B012-16F15B098EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0B3D81D-CC14-494D-B012-16F15B098EDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98496DF4-C35D-47FC-833B-3C8B24C99D8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98496DF4-C35D-47FC-833B-3C8B24C99D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98496DF4-C35D-47FC-833B-3C8B24C99D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98496DF4-C35D-47FC-833B-3C8B24C99D8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99FF8875-475A-47F9-A9E9-7C09D26F241B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99FF8875-475A-47F9-A9E9-7C09D26F241B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99FF8875-475A-47F9-A9E9-7C09D26F241B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99FF8875-475A-47F9-A9E9-7C09D26F241B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
