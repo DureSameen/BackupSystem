@@ -20,6 +20,9 @@ namespace BackupSystem.WinApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            notifyicon.Visible = true;
+            notifyicon.ShowBalloonTip(100, "BackupSystem", "Backup Started",  ToolTipIcon.Info);
+            this.Hide();
             BackupSystemService.BackupManagerClient svc = new BackupSystemService.BackupManagerClient();
 
             string IPAddress = IP.Find();
@@ -32,7 +35,7 @@ namespace BackupSystem.WinApp
 
                 Backup.Folder(backup.SourcePath, backup.TargetPath, DateTime.Now, backup.Name,  backup.BackupType );
                 svc.Update_ScheduleDetailStatus(backup.Schedule_Detail_Id, BackupSystemService.EnumsStatus.Done);
-
+                notifyicon.ShowBalloonTip(100, "BackupSystem", backup.Name +" Backup done successfully", ToolTipIcon.Info);
             }
 
         }
