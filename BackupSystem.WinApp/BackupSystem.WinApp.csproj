@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
@@ -53,10 +54,18 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Backup.cs" />
+    <Compile Include="Models\BackupManager.cs" />
+    <Compile Include="Models\Configuration.cs" />
     <Compile Include="Models\IP.cs" />
+    <Compile Include="Models\Log.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\BackupSystemService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LogServiceSystem\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -95,6 +104,16 @@
     <None Include="Service References\BackupSystemService\BackupSystem.WinApp.BackupSystemService.wcfScheduleDetails.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\LogServiceSystem\LoggerService.wsdl" />
+    <None Include="Service References\LogServiceSystem\LoggerService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LogServiceSystem\LoggerService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LogServiceSystem\LoggerService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -104,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\BackupSystemService\" />
+    <WCFMetadataStorage Include="Service References\LogServiceSystem\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\BackupSystemService\BackupManager.disco" />
@@ -116,6 +136,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\BackupSystemService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LogServiceSystem\LoggerService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LogServiceSystem\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LogServiceSystem\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LogServiceSystem\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

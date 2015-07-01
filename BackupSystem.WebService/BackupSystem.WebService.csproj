@@ -77,6 +77,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="BackupManager.svc" />
+    <Content Include="LoggerService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +87,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Host\AutofacContainerBuilder.cs" />
+    <Compile Include="ILoggerService.cs" />
+    <Compile Include="LoggerService.svc.cs">
+      <DependentUpon>LoggerService.svc</DependentUpon>
+    </Compile>
     <Compile Include="Modules\EFModule.cs" />
     <Compile Include="Modules\ServiceModule.cs" />
     <Compile Include="BackupManager.svc.cs">
@@ -93,6 +98,8 @@
     </Compile>
     <Compile Include="IBackupManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\ServiceAuthenticator.cs" />
+    <Compile Include="Security\ServiceLevelAuthentication.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

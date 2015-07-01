@@ -23,18 +23,21 @@ namespace BackupSystem.WinApp
             notifyicon.Visible = true;
             notifyicon.ShowBalloonTip(100, "BackupSystem", "Backup Started",  ToolTipIcon.Info);
             this.Hide();
+
+
             BackupSystemService.BackupManagerClient svc = new BackupSystemService.BackupManagerClient();
 
             string IPAddress = IP.Find();
-            svc.CreateScheduleDetails(IPAddress);
+            BackupManager.CreateScheduleDetails(IPAddress);
 
-            var backups = svc.GetScheduleDetails(IPAddress);
+            var backups = BackupManager.GetScheduleDetails(IPAddress);
 
             foreach(var backup in backups)
             {
 
-                Backup.Folder(backup.SourcePath, backup.TargetPath, DateTime.Now, backup.Name,  backup.BackupType );
+                Backup.Folder(backup.SourcePath, backup.TargetPath, DateTime.Now, backup.Name, backup.BackupType, backup.Schedule_Detail_Id);
                 svc.Update_ScheduleDetailStatus(backup.Schedule_Detail_Id, BackupSystemService.EnumsStatus.Done);
+
                 notifyicon.ShowBalloonTip(100, "BackupSystem", backup.Name +" Backup done successfully", ToolTipIcon.Info);
             }
 

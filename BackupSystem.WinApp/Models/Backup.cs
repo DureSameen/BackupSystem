@@ -10,15 +10,17 @@ namespace BackupSystem.WinApp.Models
 {
    public static class Backup
     {
-        public static void Folder(string from, string to, DateTime logTime, string name ,EnumsBackupType backuptype  )
+        public static void Folder(string from, string to, DateTime logTime, string name ,EnumsBackupType backuptype,   long Schedule_DetailId  )
         {
-           // Log.Info("Backup started", from, to, logTime);
+            Log.Begin(name + ": Backup started ..." , Schedule_DetailId);
+
 
             try
             {
                 if (!Directory.Exists(from))
                 {
-                    throw new Exception("Folder does not exist or access denied to " + from);
+                    Log.Error(name + ": Source Folder does not exist or access denied to " + from, Schedule_DetailId);
+                    throw new Exception("Source Folder does not exist or access denied to " + from);
                 }
 
                 if ((backuptype == EnumsBackupType.Incremental_Backup))
@@ -47,7 +49,7 @@ namespace BackupSystem.WinApp.Models
                     }
                     catch (Exception ex)
                     {
-                        //Log.Error(ex.Message, from, to, logTime);
+                        Log.Error(name + ": " + ex.Message, Schedule_DetailId);
                     }
                 });
 
@@ -70,21 +72,23 @@ namespace BackupSystem.WinApp.Models
                     }
                     catch (Exception ex)
                     {
-                       // Log.Error(ex.Message, from, to, logTime);
+                       
+                        Log.Error(name + ": "+ ex.Message  , Schedule_DetailId);
                     }
                 });
 
-               
 
-               // Log.Info("Backup completed successfully", from, to, logTime);
+                Log.End(name + ":  Backup completed successfully", Schedule_DetailId);
+                
             }
             catch (Exception ex)
             {
-               // 'Log.Error(ex.Message, from, to, logTime);
-                //'Log.Info("Backup completed with errors", from, to, logTime);
+                Log.Error(name + ": " + ex.Message, Schedule_DetailId);
+                Log.End  (name + ":  Backup completed with errors", Schedule_DetailId);
+                 
             }
 
-            //'Log.Clear();
+             
         }
     }
 }

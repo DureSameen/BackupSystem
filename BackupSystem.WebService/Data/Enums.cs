@@ -33,5 +33,16 @@ namespace BackupSystem.WebService.Data
 
         }
 
+        public enum EventlogType
+        {
+            NoType = 0,
+            Backup_Process_Begin=1,
+            Backup_Process_Ended=2,
+            Error=3
+        
+        }
+
+
+
     }
 }
