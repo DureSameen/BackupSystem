@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BackupManager" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:4501/BackupManager.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:4501/BackupManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:4501/BackupManager.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BackupSystem.WebService.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBackupManager_CreateScheduleDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateScheduleDetails" />
+  </wsdl:message>
+  <wsdl:message name="IBackupManager_CreateScheduleDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateScheduleDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackupManager_GetScheduleDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduleDetails" />
+  </wsdl:message>
+  <wsdl:message name="IBackupManager_GetScheduleDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduleDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackupManager_Update_ScheduleDetailStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update_ScheduleDetailStatus" />
+  </wsdl:message>
+  <wsdl:message name="IBackupManager_Update_ScheduleDetailStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Update_ScheduleDetailStatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBackupManager">
+    <wsdl:operation name="CreateScheduleDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackupManager/CreateScheduleDetails" message="tns:IBackupManager_CreateScheduleDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackupManager/CreateScheduleDetailsResponse" message="tns:IBackupManager_CreateScheduleDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackupManager/GetScheduleDetails" message="tns:IBackupManager_GetScheduleDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackupManager/GetScheduleDetailsResponse" message="tns:IBackupManager_GetScheduleDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_ScheduleDetailStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackupManager/Update_ScheduleDetailStatus" message="tns:IBackupManager_Update_ScheduleDetailStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackupManager/Update_ScheduleDetailStatusResponse" message="tns:IBackupManager_Update_ScheduleDetailStatus_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBackupManager" type="tns:IBackupManager">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateScheduleDetails">
+      <soap:operation soapAction="http://tempuri.org/IBackupManager/CreateScheduleDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleDetails">
+      <soap:operation soapAction="http://tempuri.org/IBackupManager/GetScheduleDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_ScheduleDetailStatus">
+      <soap:operation soapAction="http://tempuri.org/IBackupManager/Update_ScheduleDetailStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BackupManager">
+    <wsdl:port name="BasicHttpBinding_IBackupManager" binding="tns:BasicHttpBinding_IBackupManager">
+      <soap:address location="http://localhost:4501/BackupManager.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

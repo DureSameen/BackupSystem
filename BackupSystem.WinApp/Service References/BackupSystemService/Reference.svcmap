@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="403711cf-8dba-4014-b918-ae5ab0efd8d8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:4501/BackupManager.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BackupManager1.xsd" MetadataType="Schema" ID="542715f5-9609-46a3-8111-353f2f921523" SourceId="1" SourceUrl="http://localhost:4501/BackupManager.svc?xsd=xsd1" />
+    <MetadataFile FileName="BackupManager.disco" MetadataType="Disco" ID="84f11ad2-0e44-42c4-bc22-d7f253bb9416" SourceId="1" SourceUrl="http://localhost:4501/BackupManager.svc?disco" />
+    <MetadataFile FileName="BackupManager11.xsd" MetadataType="Schema" ID="046161ba-cf4a-4585-991f-a108585f4df8" SourceId="1" SourceUrl="http://localhost:4501/BackupManager.svc?xsd=xsd2" />
+    <MetadataFile FileName="BackupManager.xsd" MetadataType="Schema" ID="eff6c6c4-6ce0-4409-bf53-401f11064e8e" SourceId="1" SourceUrl="http://localhost:4501/BackupManager.svc?xsd=xsd0" />
+    <MetadataFile FileName="BackupManager.wsdl" MetadataType="Wsdl" ID="f846f54a-3a53-4c89-ac32-4a36e6793f8d" SourceId="1" SourceUrl="http://localhost:4501/BackupManager.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

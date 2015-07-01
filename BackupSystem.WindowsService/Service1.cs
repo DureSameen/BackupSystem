@@ -7,6 +7,10 @@ using System.Linq;
 using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
+using BackupSystem;
+
+using BackupSystem.WindowsService.BackupSystemService;
+
 
 namespace BackupSystem.WindowsService
 {
@@ -19,6 +23,13 @@ namespace BackupSystem.WindowsService
 
         protected override void OnStart(string[] args)
         {
+
+            BackupManagerClient svc = new  BackupManagerClient();
+            
+
+            svc.CreateScheduleDetails();
+
+
         }
 
         protected override void OnStop()
