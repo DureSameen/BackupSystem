@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BackupSystem.WindowsService.Models
 {
-{
+ 
     public static class BackupManager
     {
 

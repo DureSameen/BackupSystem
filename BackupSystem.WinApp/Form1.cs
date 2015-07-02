@@ -36,6 +36,9 @@ namespace BackupSystem.WinApp
            
             var backups = BackupManager.GetScheduleDetails(IPAddress);
 
+            if (backups.Count()==0)
+                notifyicon.ShowBalloonTip(100, "BackupSystem",   "no backup found for "+ IPAddress, ToolTipIcon.Info);
+
             foreach(var backup in backups)
             {
 
@@ -49,7 +52,7 @@ namespace BackupSystem.WinApp
                 else
                 { notifyicon.ShowBalloonTip(100, "BackupSystem", backup.Name + " Backup completed with errors", ToolTipIcon.Error ); }
             }
-       timer_closeformapp.Enabled=true;  
+    
         }
 
     

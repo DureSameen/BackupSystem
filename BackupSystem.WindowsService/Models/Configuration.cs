@@ -7,7 +7,7 @@ using System.Web;
 using System.Configuration;
 namespace BackupSystem.WindowsService.Models
 {
-{
+ 
    public static class Configuration
     {
 
