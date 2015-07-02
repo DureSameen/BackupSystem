@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<BackupSystem.Model.EventLog>
-
+@using BackupSystem.Helpers;
 @{
     ViewBag.Title = "Index";
 }
@@ -26,13 +26,14 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-       
+@foreach (var item in Model)
+{
+    <tr @Html.RowColor(item.EventLogTypeId.Value)>
+
         <td>
             @Html.DisplayFor(modelItem => item.Schedule_Detail.Schedule.Backup.Name)
         </td>
-        
+
         <td>
             @Html.DisplayFor(modelItem => item.Description)
         </td>

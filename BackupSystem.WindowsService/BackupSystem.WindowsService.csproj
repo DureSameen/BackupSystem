@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
@@ -44,16 +45,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\BackupManager.cs" />
+    <Compile Include="Models\Configuration.cs" />
+    <Compile Include="Models\IP.cs" />
     <Compile Include="Service References\BackupSystemService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service1.cs">
+    <Compile Include="BackupService.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Service1.Designer.cs">
-      <DependentUpon>Service1.cs</DependentUpon>
+    <Compile Include="BackupService.Designer.cs">
+      <DependentUpon>BackupService.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,6 +65,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Service References\BackupSystemService\BackupManager.wsdl" />
+    <None Include="Service References\BackupSystemService\BackupManager.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\BackupSystemService\BackupManager1.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -75,6 +82,12 @@
     <None Include="Service References\BackupSystemService\BackupManager.disco" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\BackupSystemService\BackupManager2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BackupSystemService\BackupSystem.WindowsService.BackupSystemService.wcfScheduleDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\BackupSystemService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>

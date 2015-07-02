@@ -25,6 +25,18 @@
   <wsdl:message name="IBackupManager_Update_ScheduleDetailStatus_OutputMessage">
     <wsdl:part name="parameters" element="tns:Update_ScheduleDetailStatusResponse" />
   </wsdl:message>
+  <wsdl:message name="IBackupManager_GetWorkStationByIp_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkStationByIp" />
+  </wsdl:message>
+  <wsdl:message name="IBackupManager_GetWorkStationByIp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkStationByIpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackupManager_AddWorkStation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddWorkStation" />
+  </wsdl:message>
+  <wsdl:message name="IBackupManager_AddWorkStation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddWorkStationResponse" />
+  </wsdl:message>
   <wsdl:portType name="IBackupManager">
     <wsdl:operation name="CreateScheduleDetails">
       <wsdl:input wsaw:Action="http://tempuri.org/IBackupManager/CreateScheduleDetails" message="tns:IBackupManager_CreateScheduleDetails_InputMessage" />
@@ -37,6 +49,14 @@
     <wsdl:operation name="Update_ScheduleDetailStatus">
       <wsdl:input wsaw:Action="http://tempuri.org/IBackupManager/Update_ScheduleDetailStatus" message="tns:IBackupManager_Update_ScheduleDetailStatus_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBackupManager/Update_ScheduleDetailStatusResponse" message="tns:IBackupManager_Update_ScheduleDetailStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkStationByIp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackupManager/GetWorkStationByIp" message="tns:IBackupManager_GetWorkStationByIp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackupManager/GetWorkStationByIpResponse" message="tns:IBackupManager_GetWorkStationByIp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddWorkStation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackupManager/AddWorkStation" message="tns:IBackupManager_AddWorkStation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackupManager/AddWorkStationResponse" message="tns:IBackupManager_AddWorkStation_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IBackupManager" type="tns:IBackupManager">
@@ -61,6 +81,24 @@
     </wsdl:operation>
     <wsdl:operation name="Update_ScheduleDetailStatus">
       <soap:operation soapAction="http://tempuri.org/IBackupManager/Update_ScheduleDetailStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkStationByIp">
+      <soap:operation soapAction="http://tempuri.org/IBackupManager/GetWorkStationByIp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddWorkStation">
+      <soap:operation soapAction="http://tempuri.org/IBackupManager/AddWorkStation" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

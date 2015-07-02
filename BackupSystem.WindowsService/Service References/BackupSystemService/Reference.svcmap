@@ -22,7 +22,9 @@
     <MetadataSource Address="http://localhost:4501/BackupManager.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
+    <MetadataFile FileName="BackupManager.xsd" MetadataType="Schema" ID="5c147c13-77ab-4a5a-af2e-2f715b3c5bd6" SourceId="1" SourceUrl="http://localhost:4501/BackupManager.svc?xsd=xsd1" />
     <MetadataFile FileName="BackupManager.disco" MetadataType="Disco" ID="4e34700b-a907-4be3-b13e-0d1e05551cae" SourceId="1" SourceUrl="http://localhost:4501/BackupManager.svc?disco" />
+    <MetadataFile FileName="BackupManager2.xsd" MetadataType="Schema" ID="42e3ef5b-63e9-4686-90a0-ba325e1067ea" SourceId="1" SourceUrl="http://localhost:4501/BackupManager.svc?xsd=xsd2" />
     <MetadataFile FileName="BackupManager1.xsd" MetadataType="Schema" ID="71a5b3b1-e3a8-476c-b003-39a4781abba8" SourceId="1" SourceUrl="http://localhost:4501/BackupManager.svc?xsd=xsd0" />
     <MetadataFile FileName="BackupManager.wsdl" MetadataType="Wsdl" ID="95a51289-d831-4133-99aa-355d86721916" SourceId="1" SourceUrl="http://localhost:4501/BackupManager.svc?wsdl" />
   </Metadata>

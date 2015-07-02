@@ -25,23 +25,47 @@ namespace BackupSystem.WinApp
             this.Hide();
 
 
-            BackupSystemService.BackupManagerClient svc = new BackupSystemService.BackupManagerClient();
+             
 
             string IPAddress = IP.Find();
-            BackupManager.CreateScheduleDetails(IPAddress);
 
+            if (!WorkStation.GetbyIP(IPAddress))
+                WorkStation.AddWorkStation(IPAddress, IP.GetComputerName());
+
+            BackupManager.CreateScheduleDetails(IPAddress);
+           
             var backups = BackupManager.GetScheduleDetails(IPAddress);
 
             foreach(var backup in backups)
             {
 
-                Backup.Folder(backup.SourcePath, backup.TargetPath, DateTime.Now, backup.Name, backup.BackupType, backup.Schedule_Detail_Id);
-                svc.Update_ScheduleDetailStatus(backup.Schedule_Detail_Id, BackupSystemService.EnumsStatus.Done);
+                if (Backup.CopyFolder(backup.SourcePath, backup.TargetPath, DateTime.Now, backup.Name, backup.BackupType, backup.Schedule_Detail_Id, backup.SourceUserId, backup.SourceUser_Password, backup.SourceUser_DomainName, backup.TargetUserId, backup.TargetUser_Password, backup.TargetUser_DomainName))
+                {
+                    BackupManager.Update_ScheduleDetailStatus(backup.Schedule_Detail_Id, BackupSystemService.EnumsStatus.Done);
 
-                notifyicon.ShowBalloonTip(100, "BackupSystem", backup.Name +" Backup done successfully", ToolTipIcon.Info);
+                    notifyicon.ShowBalloonTip(100, "BackupSystem", backup.Name + " Backup done successfully", ToolTipIcon.Info);
+                }
+
+                else
+                { notifyicon.ShowBalloonTip(100, "BackupSystem", backup.Name + " Backup completed with errors", ToolTipIcon.Error ); }
             }
+       timer_closeformapp.Enabled=true;  
+        }
+
+    
+     
+
+        private void timer_closeformapp_Tick(object sender, EventArgs e)
+        {
+            this.Close();
 
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            System.Environment.Exit(1);
+        } 
+  
     }
 }
 

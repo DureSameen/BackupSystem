@@ -6,7 +6,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BackupSystem.WinApp.Models
+namespace BackupSystem.WindowsService.Models
 {
    public static class IP
     {

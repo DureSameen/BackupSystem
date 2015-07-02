@@ -56,7 +56,9 @@
     <Compile Include="Models\Backup.cs" />
     <Compile Include="Models\BackupManager.cs" />
     <Compile Include="Models\Configuration.cs" />
+    <Compile Include="Models\Impersonation.cs" />
     <Compile Include="Models\IP.cs" />
+    <Compile Include="Models\Workstation.cs" />
     <Compile Include="Models\Log.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

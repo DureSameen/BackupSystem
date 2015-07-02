@@ -267,6 +267,18 @@ namespace BackupSystem.WinApp.BackupSystemService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBackupManager/Update_ScheduleDetailStatus", ReplyAction="http://tempuri.org/IBackupManager/Update_ScheduleDetailStatusResponse")]
         System.Threading.Tasks.Task Update_ScheduleDetailStatusAsync(long ScheduleDetailId, BackupSystem.WinApp.BackupSystemService.EnumsStatus status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBackupManager/GetWorkStationByIp", ReplyAction="http://tempuri.org/IBackupManager/GetWorkStationByIpResponse")]
+        bool GetWorkStationByIp(string ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBackupManager/GetWorkStationByIp", ReplyAction="http://tempuri.org/IBackupManager/GetWorkStationByIpResponse")]
+        System.Threading.Tasks.Task<bool> GetWorkStationByIpAsync(string ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBackupManager/AddWorkStation", ReplyAction="http://tempuri.org/IBackupManager/AddWorkStationResponse")]
+        void AddWorkStation(string IP, string computername);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBackupManager/AddWorkStation", ReplyAction="http://tempuri.org/IBackupManager/AddWorkStationResponse")]
+        System.Threading.Tasks.Task AddWorkStationAsync(string IP, string computername);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -318,6 +330,22 @@ namespace BackupSystem.WinApp.BackupSystemService {
         
         public System.Threading.Tasks.Task Update_ScheduleDetailStatusAsync(long ScheduleDetailId, BackupSystem.WinApp.BackupSystemService.EnumsStatus status) {
             return base.Channel.Update_ScheduleDetailStatusAsync(ScheduleDetailId, status);
+        }
+        
+        public bool GetWorkStationByIp(string ip) {
+            return base.Channel.GetWorkStationByIp(ip);
+        }
+        
+        public System.Threading.Tasks.Task<bool> GetWorkStationByIpAsync(string ip) {
+            return base.Channel.GetWorkStationByIpAsync(ip);
+        }
+        
+        public void AddWorkStation(string IP, string computername) {
+            base.Channel.AddWorkStation(IP, computername);
+        }
+        
+        public System.Threading.Tasks.Task AddWorkStationAsync(string IP, string computername) {
+            return base.Channel.AddWorkStationAsync(IP, computername);
         }
     }
 }
